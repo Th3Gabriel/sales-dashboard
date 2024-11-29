@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
+const Title = styled.h1`
+  color: blue;
+`
+
 function Leads() {
   return (
     <>
-      <h1>Leads</h1>
+      <Title>Leads</Title>
     </>
   )
 }
