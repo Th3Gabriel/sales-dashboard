@@ -5,7 +5,7 @@ function Registration() {
   return (
     <>
       <Box>
-        <Grid Container>
+        <Grid container>
           <Grid
             item
             xs={12}
