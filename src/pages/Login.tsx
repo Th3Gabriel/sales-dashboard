@@ -37,7 +37,7 @@ function Login() {
                 buttons={[
                   { className: 'primary', type: 'submit', children: 'Login' },
                 ]}
-                message={{ msg: 'Sucesso!!!', type: 'alert' }}
+                message={{ msg: 'Sucesso!!!', type: 'success' }}
               />
             </Container>
           </Grid>
