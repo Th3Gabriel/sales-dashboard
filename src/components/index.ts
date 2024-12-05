@@ -1,5 +1,6 @@
 export * from './Typographies'
 export * from './Logo'
+export * from './CardComponent'
 export { default as StyledInput } from './StyledInput'
 export { default as StyledButton } from './StyledButton'
 export { default as Header } from './Header'
