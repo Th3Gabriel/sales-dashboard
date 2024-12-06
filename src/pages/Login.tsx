@@ -1,20 +1,51 @@
-import styled from 'styled-components'
+import {
+  BannerImage,
+  FormComponents,
+  StyledH1,
+  StyledP,
+  Logo,
+} from '@/components'
+import { pxTorem } from '@/utils'
+import { Box, Container, Grid } from '@mui/material'
 
-const LoginArea = styled.div`
-  background: #666;
-`
-
-const LoginImage = styled.div`
-  background-image: url(/login-image.svg);
-  background-size: cover;
-  height: 100vh;
-  width: 50vh;
-`
 function Login() {
   return (
     <>
-      <LoginArea>LOGIN</LoginArea>
-      <LoginImage />
+      <Box>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            sx={{ alignItems: 'center', display: 'flex', height: '100vh' }}
+          >
+            <Container maxWidth="sm">
+              <Box sx={{ marginBottom: pxTorem(24) }}>
+                <Logo height={41} width={100} />
+              </Box>
+
+              <Box sx={{ marginBottom: pxTorem(24) }}>
+                <StyledH1>Bem-vindo</StyledH1>
+                <StyledP>Digite sua senha e email para logar</StyledP>
+              </Box>
+
+              <FormComponents
+                inputs={[
+                  { type: 'email', placeholder: 'Email' },
+                  { type: 'password', placeholder: 'Senha' },
+                ]}
+                buttons={[
+                  { className: 'primary', type: 'submit', children: 'Login' },
+                ]}
+                message={{ msg: 'Sucesso!!!', type: 'success' }}
+              />
+            </Container>
+          </Grid>
+          <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <BannerImage />
+          </Grid>
+        </Grid>
+      </Box>
     </>
   )
 }
